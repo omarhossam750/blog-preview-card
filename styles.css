@@ -3,7 +3,7 @@
   --card-bgcolor: #FDFDFD;
   --card-content-gap: 13px; 
   --card-border-color: #444444aa;
-  --author-img-border-color: #99d;
+  --author-img-border-color: #d1d1d1;
 }
 *, *::before, *::after {
   padding: 0;
@@ -111,5 +111,16 @@ main {
   }
   html {
     font-size: 12px;
+  }
+}
+@media (min-width: 1600px) {
+  html {
+    font-size: 20px;
+  }
+  .blog-card {
+    width: 360px;
+  }
+  .blog-title {
+    font-size: 1.5rem;
   }
 }
