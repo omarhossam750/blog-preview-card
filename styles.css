@@ -1,0 +1,115 @@
+:root {
+  --main-bgcolor: #f6d050;
+  --card-bgcolor: #FDFDFD;
+  --card-content-gap: 13px; 
+  --card-border-color: #444444aa;
+  --author-img-border-color: #99d;
+}
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+.in__container__img {
+  object-fit: cover;
+  object-position: center;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--main-bgcolor);
+  font-family: sans-serif;
+}
+.blog-card {
+  width: 320px;
+  padding: 16px;
+  background-color: var(--card-bgcolor);
+  border-radius: 12px;
+  box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.98);
+  border: 1px solid var(--card-border-color);
+  transition: 0.2s ease;
+}
+.blog-card:hover { /* Additional */
+  background-color: #dfd;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.blog-card:active {
+  background-color: #ddf;
+}
+.card-thumbnail, .card-thumbnail > img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card-content {
+  padding: var(--card-content-gap) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-content-gap);
+}
+.blog-category {
+  background-color: var(--main-bgcolor);
+  align-self: flex-start;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.blog-publish-date {
+  color: #3F3F3F;
+}
+.blog-title {
+  font-size: 1.55rem;
+}
+.card-descripiton {
+  letter-spacing: 0.15px;
+  color: #444;
+  font-size: 0.9rem;
+}
+.author-link {
+  text-decoration: none;
+  z-index: 2;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease;
+}
+.blog-author img {
+  width: 42px;
+  border: 2px solid var(--author-img-border-color);
+  border-radius: 50%;
+}
+.author-link:hover {
+  color: #505;
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 14px;
+  }
+  .blog-card {
+    width: 90%;
+    margin: 12px 0;
+    box-shadow: 4px 5px 0 rgba(0, 0, 0, 0.98);
+  }
+  .blog-card:hover {
+    transform: none;
+    background-color: var(--card-bgcolor);
+  }
+  .blog-card:active {
+    background-color: #DADADA;
+  }
+}
+@media (max-width: 260px) {
+  :root {
+    --card-content-gap: 8px;
+  }
+  html {
+    font-size: 12px;
+  }
+}
