@@ -4,4 +4,4 @@ This is a Frontend Mentor Challenge to build a Responsive Blog Card Preview Comp
 
 I built it using Flexbox, Media Queries.
 
-[Preview Website] ()
+[Preview Website] (https://omarhossam750.github.io/blog-preview-card/)
